@@ -40,7 +40,7 @@ def main():
     load_dotenv()
     access_token = os.environ["VK_TOKEN"]
     parser = argparse.ArgumentParser(description='Данный скрип позволяет сокращать длинные ссылки, а так же получать количество кликов по уже сокращенным ссылкам')
-    parser.add_argument('--url', type=str, help='Введите ссылку')
+    parser.add_argument('url', type=str, help='Введите ссылку')
     args = parser.parse_args()
     parsed_url = urlparse(args.url)
     
